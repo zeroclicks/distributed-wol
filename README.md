@@ -34,5 +34,5 @@ Since it is a distributed system, message exchange (Send/Receive) is used. `Send
 Challenges faced during implementation: mutual exclusion and debugging. Initially, mutexes were activated for any access made to the table, whether writing or reading. In such manner, however, the table was not being updated as expected, as the mutex was never freed ([starvation](https://en.wikipedia.org/wiki/Starvation_(computer_science))). The problem was solved by triggering the mutex only when writing to the table. Debugging the application at home with only a single computer available allowed only using f loopback mode which does not allow testing wakeonlan. During lab classes, errors occurred that did not occur at home, such as when obtaining the IP and MAC of the machine. Fortunately, such errors were more easily resolved.
 
 
-## Reference
+## References
 Sen, Siddhartha, Jacob R. Lorch, Richard Hughes, Carlos Garcia Jurado Suarez, Brian Zill, Weverton Cordeiro, and Jitendra Padhye. "Don't Lose Sleep Over Availability: The GreenUp Decentralized Wakeup Service." In 9th USENIX Symposium on Networked Systems Design and Implementation (NSDI 12), pp. 211-224. 2012.
